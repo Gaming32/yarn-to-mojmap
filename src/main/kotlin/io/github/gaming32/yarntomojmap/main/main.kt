@@ -95,7 +95,6 @@ fun main(vararg args: String): Unit = runBlocking {
             val mappingWriter = MappingWriter.create(streamWriter, parsedArgs.format)
                 ?: error("Unsupported output format ${parsedArgs.format}")
             buildMappings(mappings, mappingWriter)
-            streamWriter.newLine()
             streamWriter.flush()
         }
 

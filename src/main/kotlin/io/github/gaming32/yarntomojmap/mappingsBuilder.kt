@@ -21,7 +21,7 @@ fun buildMappings(mappings: MappingsTriple, visitor: MappingVisitor) {
 
         val intermediaryClass = intermediary.getClass(obf)
         if (intermediaryClass == null) {
-            if (named != obf) { // Intermediary doesn't contain fully unobfuscated entries
+            if (named != obf) { // Intermediary doesn't contain fully unobfuscated classes
                 logger.warn { "Missing intermediary name for $obf ($named)" }
             }
             continue
