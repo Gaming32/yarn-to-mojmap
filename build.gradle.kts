@@ -35,3 +35,7 @@ application {
 kotlin {
     jvmToolchain(17)
 }
+
+tasks.shadowJar {
+    mergeServiceFiles()
+}
